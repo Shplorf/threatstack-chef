@@ -153,11 +153,11 @@ unless node['threatstack']['rulesets'].empty?
     end
 
     # Only if we are about to reconfigure a running instance
-    execute 'stop threatstack services' do
-      command '/usr/bin/cloudsight stop'
-      action :nothing
-      subscribes :run, 'file[/opt/threatstack/etc/active_rulesets.txt]', :immediately
-    end
+    # execute 'stop threatstack services' do
+    #   command '/usr/bin/cloudsight stop'
+    #   action :nothing
+    #   subscribes :run, 'file[/opt/threatstack/etc/active_rulesets.txt]', :immediately
+    # end
   end
 end
 

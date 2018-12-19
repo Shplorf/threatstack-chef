@@ -25,6 +25,7 @@ default['threatstack']['pkg_opts'] = nil
 # If no rulesets are specified the agent will register to the default
 # rule set, according to a comment in recipes/default.rb
 default['threatstack']['rulesets'] = []
+default['threatstack']['url'] = nil
 default['threatstack']['hostname'] = nil
 default['threatstack']['ignore_failure'] = true
 

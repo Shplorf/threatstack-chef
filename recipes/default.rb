@@ -127,6 +127,7 @@ unless agent_config_args_full.empty?
   end
 end
 cmd += "cloudsight setup --deploy-key=#{deploy_key}"
+cmd += " --url #{node['threatstack']['url']}" unless node['threatstack']['url'].nil?
 cmd += " --hostname='#{node['threatstack']['hostname']}'" if node['threatstack']['hostname']
 cmd += " #{node['threatstack']['agent_extra_args']}" if node['threatstack']['agent_extra_args'] != ''
 

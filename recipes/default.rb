@@ -68,6 +68,8 @@ if deploy_key.nil? || deploy_key.empty?
   raise 'No Threat Stack deploy key found in run state, attributes, or data bag. Cannot continue.'
 end
 
+execute 'sleep 2'
+
 # Register the Threat Stack agent - Rulesets are not required
 # and if it's omitted then the agent will be placed into a
 # default rule set (most likely 'Base Rule Set')
